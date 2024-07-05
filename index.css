@@ -1,0 +1,26 @@
+@font-face { font-family: 'JKU'; src: url('font/LXGWWenKaiMonoTC-Regular.ttf'); }
+a{ text-decoration: none; color: #291b09; }
+body{ background-color: #FFFBEE; margin: 0%; font-family: 'JKU'; user-select: none; -webkit-user-select: none; -moz-user-select: none; overflow-x: auto; overflow-y: auto; }
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar:hover { width: 7px; height: 7px; }
+font { font-family: 'JKU'; color: #756120; }
+/* float-box */
+.float-box { position: fixed; display: block; z-index: 100000; background-color: #FFF781F0; transition: all 0.3s ease-in-out; }
+.float-box:hover { background-color: #FFFbc4F0; transition: all 0.3s ease-in-out; }
+.float-icon { position: absolute; display: block; border-radius: 5px; margin-top: 1px; margin-left: 1px; opacity: 0.9; transition: all 0.3s ease-in-out; }
+.float-icon:hover { border-radius: 5px; margin-top: 3px; margin-left: 3px; opacity: 1.0; transition: all 0.3s ease-in-out; }
+
+
+.textInputName { position: absolute; width: 100px; margin: 12px 5px; --accent-color: #e5be83; margin-left: 5px; }
+.textInputName:before { transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; border-bottom: 1px solid #ffd3aa6b; }
+.textInputName:before, .textInputName:after { content: ""; left: 0; right: 0; position: absolute; pointer-events: none; bottom: -1px; z-index: 4; width: 124px; }
+.textInputName:focus-within:before { border-bottom: 1px solid var(--accent-color); }
+.textInputName:before { transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; border-bottom: 1px solid #ffd3aa6b; }
+.textInputName:focus-within:before { border-bottom: 1px solid var(--accent-color); transform: scaleX(1); }
+.textInputName:focus-within:after { border-bottom: 2px solid var(--accent-color); transform: scaleX(1); }
+.textInputName:after { content: ""; transform: scaleX(0); transition: transform 250ms cubic-bezier(0, 0, 0.2, 1) 0ms; will-change: transform; border-bottom: 2px solid var(--accent-color); border-bottom-color: var(--accent-color); }
+.textInput::placeholder { transition: opacity 250ms cubic-bezier(0, 0, 0.2, 1) 0ms; opacity: 1; user-select: none; color: #dfbba394; }
+.textInputName .textInput { border-radius: 5px 5px 0px 0px; box-shadow: 0px 2px 5px #ffd3aa6b; font-family: 'JKU'; max-height: 36px; background-color: #ffde97; transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1); transition-duration: 200ms; transition-property: background-color; color: #362916; font-size: 14px; font-weight: 500; padding: 12px; width: 100%; border-left: none; border-bottom: none; border-right: none; }
+.textInputName .textInput:focus, .textInputName .textInput:active { outline: none; }
+.textInputName:focus-within .textInput, .textInputName .textInput:focus, .textInputName .textInput:active { background-color: #ffd579; }
+.textInputName:focus-within .textInput::placeholder { opacity: 0; }  
