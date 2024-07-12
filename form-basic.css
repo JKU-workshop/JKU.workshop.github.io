@@ -1,0 +1,316 @@
+.form-basic {
+    /* Basic information */
+    --form-text-box-top: 90px;
+    --form-select-box-top: 180px;
+    --form-nextpage-btn-top: 320px;
+    /* Date select */
+    --form-date-word-top: 80px;
+    --form-date-title-top: 130px;
+    /* Order type / Shop car */
+    --choose-btn-top: 80px;
+    --shop-car-btn-top: 250px;
+    /* SaladBoat */
+    --Bread-type-box-left: 23px;
+    --Bread-type-box-top: 70px;
+
+    --Salad-box-left: 23px;
+    --Salad-box-top: 70px;
+
+    --Main-box-left: 5px;
+    --Main-box-top: 90px;
+    
+    --Secd-box-left: 125px;
+    --Secd-box-top: 90px;
+    
+    --SaladBoat-Count-top: 294px;
+
+    /* Donut */
+    --Donut-Count-top: 294px;
+}
+.form-basic {
+    position: absolute; display: flex; justify-content: center; align-items: center;
+    background-color: #ffe07b;
+    min-height: 400px; min-width: 250px;
+    max-height: 600px; max-width: 400px;
+    --form-basic-min-height: 300px; --form-basic-min-width: 200px;
+    --form-basic-max-height: 600px; --form-basic-max-width: 400px;
+    margin-top: var(--form-basic-max-height); border-radius: 5px;
+}
+.form-title {
+    position: absolute; display: flex; justify-content: center; align-items: center;
+    font-size: 45px; top: 10px; color: #644f0a; letter-spacing: 5px;
+}
+.form-small-title {
+    position: absolute; display: flex; justify-content: center; align-items: center;
+    font-size: 30px; top: 60px; color: #644f0a; letter-spacing: 5px;
+}
+/* ----------------------------------------------------------------- page01 -----------------------------------------------------------------*/
+/* text */
+.form-text-box { position: absolute; top: var(--form-text-box-top); }
+.form-text {
+    background-color: #ffe07b; border: 2px solid #ffcc25; color: #725a0c;
+    border-radius: 5px; outline: none; padding: 5px; transition: all 0.3s;
+    font-family: 'JKU'; font-size: 30px;
+    min-width: 100px; min-height: 50px;
+    max-width: 200px; max-height: 50px;
+    --form-text-min-width: 100px; --form-text-min-height: 50px;
+    --form-text-max-width: 200px; --form-text-max-height: 50px;
+}
+.form-text:focus { background-color: #dbbd58; transition: all 0.3s; }
+.form-text-title {
+    position: absolute;
+    border: 0px solid #ffcc25; color: #725a0c; pointer-events: none;
+    border-radius: 5px; outline: none; padding: 5px; transition: all 0.3s ease;
+    font-family: 'JKU'; font-size: 20px; letter-spacing: 1px;
+    min-width: 70px; min-height: 20px;
+    max-width: 120px; max-height: 20px;
+    margin-top: -50px; margin-left: 10px;
+}
+:is(.form-text:focus, .form-text:valid) ~ .form-text-title { background-color: #ffda60; border: 1px solid #ffcc25; color: #725a0c; transition: all 0.3s; margin-top: -85px; margin-left: 10px; }
+/* select */
+.form-select-box { position: absolute; top: var(--form-select-box-top); --form-select-width: 150px; --form-select-height: 37px; --form-select-fontsize: 25px; --form-select-fontsize-title: 27px; }
+.select-pos { display: none; }
+.select-pos-selected {
+    border: 1px solid #725a0c; border-radius: 2px; background-color: #f0d57f; color: #504627; cursor: pointer;
+    position: relative; display: flex; justify-content: center; align-items: center;
+    min-width: var(--form-select-width); min-height: var(--form-select-height); margin-top: -20px; font-size: var(--form-select-fontsize);
+}
+.select-pos:checked ~ .select-pos-selected {
+    border: 2px solid #725a0c; border-radius: 2px; background-color: #c49e20; color: #504627; cursor: pointer;
+    position: relative; display: flex; justify-content: center; align-items: center;
+}
+.select-pos-selected-title {
+    border: 2px solid #f8d151; border-radius: 2px; background-color: #ffd54cea; color: #473700; cursor: pointer;
+    position: relative; display: flex; justify-content: center; align-items: center;
+    min-width: var(--form-select-width); min-height: var(--form-select-height); margin-top: -20px; font-size: var(--form-select-fontsize-title);
+}
+/* button */
+.form-nextpage-btn-one {
+    border: 0px solid #473700; border-radius: 5px; background-color: #ecc545fa; color: #4e4114; cursor: pointer;
+    position: absolute; margin-top: var(--form-nextpage-btn-top); min-width: 200px; min-height: 50px;
+    font-size: 27px; font-family: 'JKU'; letter-spacing: 5px; transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.form-nextpage-btn-one:hover {
+    border-radius: 5px; background-color: #e7cb6edc; color: #584d22; cursor: pointer;
+    font-size: 28px; font-family: 'JKU'; letter-spacing: 5px; transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.form-nextpage-btn-one:active {
+    border-radius: 5px; background-color: #ffcf33dc; color: #8d8152; cursor: pointer;
+    font-size: 28px; font-family: 'JKU'; letter-spacing: 5px; transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.form-nextpage-btn-one-icon { position: absolute; fill: #5a4a10; margin-left: 5px; margin-top: -6px; transition: all 0.7s; }
+.form-nextpage-btn-one:hover > .form-nextpage-btn-one-icon { position: absolute; fill: #947c26; margin-left: 25px; margin-top: -9px; min-width: 50px; min-height: 50px; transition: all 0.7s; }
+.form-nextpage-btn-one:active > .form-nextpage-btn-one-icon { position: absolute; fill: #cea925de; margin-left: 25px; margin-top: -11px; min-width: 55px; min-height: 55px; transition: all 0.7s; }
+
+.form-nextpage-btn {
+    border: 0px solid #473700; border-radius: 5px; background-color: #ecc545fa; color: #4e4114; cursor: pointer;
+    position: absolute; margin-top: var(--form-nextpage-btn-top); min-width: 100px; min-height: 50px; margin-left: 120px;
+    font-size: 27px; font-family: 'JKU'; letter-spacing: 5px; transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.form-nextpage-btn:hover {
+    border-radius: 5px; background-color: #e7cb6edc; color: #584d22; cursor: pointer;
+    font-size: 28px; font-family: 'JKU'; letter-spacing: 5px; transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.form-nextpage-btn:active {
+    border-radius: 5px; background-color: #ffcf33dc; color: #8d8152; cursor: pointer;
+    font-size: 28px; font-family: 'JKU'; letter-spacing: 5px; transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.form-nextpage-btn-icon { position: absolute; fill: #5a4a10; margin-left: -40px; margin-top: 27px; transition: all 0.7s; }
+.form-nextpage-btn:hover > .form-nextpage-btn-icon { position: absolute; fill: #947c26; margin-left: -20px; margin-top: 28px; min-width: 50px; min-height: 50px; transition: all 0.7s; }
+.form-nextpage-btn:active > .form-nextpage-btn-icon { position: absolute; fill: #cea925de; margin-left: -20px; margin-top: 30px; min-width: 55px; min-height: 55px; transition: all 0.7s; }
+
+.form-frontpage-btn {
+    border: 0px solid #473700; border-radius: 5px; background-color: #ecc545fa; color: #4e4114; cursor: pointer;
+    position: absolute; margin-top: var(--form-nextpage-btn-top); min-width: 100px; min-height: 50px; margin-left: -120px;
+    font-size: 27px; font-family: 'JKU'; letter-spacing: 5px; transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.form-frontpage-btn:hover {
+    border-radius: 5px; background-color: #e7cb6edc; color: #584d22; cursor: pointer;
+    font-size: 28px; font-family: 'JKU'; letter-spacing: 5px; transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.form-frontpage-btn:active {
+    border-radius: 5px; background-color: #ffcf33dc; color: #8d8152; cursor: pointer;
+    font-size: 28px; font-family: 'JKU'; letter-spacing: 5px; transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.form-frontpage-btn-icon { position: absolute; fill: #5a4a10; margin-left: -5px; margin-top: 27px; transform: rotate(180deg); transition: all 0.7s; }
+.form-frontpage-btn:hover > .form-frontpage-btn-icon { position: absolute; fill: #947c26; margin-left: -25px; margin-top: 28px; min-width: 50px; min-height: 50px; transition: all 0.7s; }
+.form-frontpage-btn:active > .form-frontpage-btn-icon { position: absolute; fill: #cea925de; margin-left: -25px; margin-top: 30px; min-width: 55px; min-height: 55px; transition: all 0.7s; }
+
+/* ----------------------------------------------------------------- page02 -----------------------------------------------------------------*/
+/* date word box */
+.date-left { position: absolute; cursor: pointer; transform: rotate(180deg); fill: #7e6206; margin-left: -200px; top: var(--form-date-word-top); }
+.date-right { position: absolute; cursor: pointer; fill: #7e6206; margin-left: 200px; top: var(--form-date-word-top); }
+.date-title { position: absolute; font-size: 25px; color: #312603; letter-spacing: 3px; top: var(--form-date-word-top); }
+.date-line { position: absolute; border-bottom: 1px solid #41340b85; min-width: 240px; top: var(--form-date-word-top); border-radius: 5px; }
+/* date word title */
+.date-word-title { position: absolute; top: var(--form-date-title-top); }
+.dateofweek-title { position: relative; color: #3a300f; font-size: 20px; margin: 6px; }
+.date-word-date { position: absolute; top: var(--form-date-title-top); margin-top: 40px; }
+.date-word { position: absolute; color: #3a300f; font-size: 20px; margin-left: 10px; margin-bottom: 5px; cursor: pointer; }
+.date-word-bg { position: absolute; background-color: #dab84750; margin-top: -2px; min-width: 27px; min-height: 27px; border-radius: 5px; opacity: 0.6; }
+.new-line { position: relative; height: 15px; margin-top: 12px; }
+
+/* ----------------------------------------------------------------- page03 -----------------------------------------------------------------*/
+/* Order type */
+.order-type {
+    position: absolute; cursor: pointer; border: none; border-radius: 5px; top: var(--choose-btn-top); transition: all 0.3s;
+    min-width: 200px; min-height: 50px; font-family: 'JKU'; font-size: 28px; color: #3f340f; background-color: #ddc165d8;
+}
+.order-type:hover { background-color: #f0c537ef; transition: all 0.3s; }
+.order-type:focus { background-color: #ffe9a2ef; border: 2px solid #3f340ec9; transition: all 0.3s; }
+/* Shop car */
+.shop-car {
+    position: absolute; cursor: pointer; border: 3px solid #fcc100; border-radius: 5px;  top: var(--shop-car-btn-top); transition: all 0.7s;
+    min-width: 200px; min-height: 50px; font-family: 'JKU'; font-size: 28px; color: #645523; background-color: #ffe390d8; letter-spacing: 2px;
+}
+.shop-car:hover { background-color: #ffc824f1; letter-spacing: 5px; transition: all 0.7s; }
+.shop-car-icon { position: absolute; fill: #c7a11a; margin-left: -50px; margin-top: 10px; opacity: 0.7; transition: all 0.7s; }
+.shop-car:hover > .shop-car-icon { position: absolute; fill: #b89827; margin-left: 55px; margin-top: 25px; opacity: 0.9; transition: all 0.7s; }
+.shop-car:focus > .shop-car-icon { position: absolute; fill: #b18e0e; margin-left: 90px; margin-top: 10px; opacity: 0.8; transition: all 0.7s; }
+
+/* ----------------------------------------------------------------- page04 -----------------------------------------------------------------*/
+/* Bread type select */
+.Bread-type-box { position: absolute; left: var(--Bread-type-box-left); top: var(--Bread-type-box-top); --Bread-type-width: 90px; --Bread-type-height: 25px; --Bread-type-fontsize: 20px; }
+.Bread-type { display: none; }
+.Bread-type-selected {
+    border: 1px solid #b9951e; border-radius: 3px; background-color: #ffe388; color: #6d6346; cursor: pointer;
+    position: relative; display: flex; justify-content: center; align-items: center;
+    min-width: var(--Bread-type-width); min-height: var(--Bread-type-height); margin-top: -20px; font-size: var(--Bread-type-fontsize);
+}
+.Bread-type:checked ~ .Bread-type-selected {
+    border: 2px solid #caad4d; border-radius: 3px; background-color: #ffd138; color: #635a3f; cursor: pointer;
+    position: relative; display: flex; justify-content: center; align-items: center; z-index: 5;
+}
+/* Salad select */
+.Salad-box { position: absolute; left: var(--Salad-box-left); top: var(--Salad-box-top); --Salad-width: 90px; --Salad-height: 25px; --Salad-fontsize: 20px; }
+.Salad { display: none; }
+.Salad-selected {
+    border: 1px solid #c0a241; border-radius: 3px; background-color: #ffe17f; color: #6b6141; cursor: pointer;
+    position: relative; display: flex; justify-content: center; align-items: center;
+    min-width: var(--Salad-width); min-height: var(--Salad-height); margin-top: -20px; font-size: var(--Salad-fontsize);
+}
+.Salad:checked ~ .Salad-selected {
+    border: 2px solid #998234; border-radius: 3px; background-color: #ffcd28; color: #776837; cursor: pointer;
+    position: relative; display: flex; justify-content: center; align-items: center; z-index: 5;
+}
+/* Main select */
+.Main-box { position: absolute; left: var(--Main-box-left); top: var(--Main-box-top); --Main-width: 100px; --Main-height: 30px; --Main-fontsize: 20px; }
+.SaladBoat-Main-box { position: absolute; left: var(--Main-box-left); top: var(--Main-box-top); --SaladBoat-Main-width: 100px; --SaladBoat-Main-height: 30px; --SaladBoat-Main-fontsize: 20px; }
+.SaladBoat-Main-select { position: absolute; left: var(--Main-box-left); top: var(--Main-box-top); border: #615632 solid 2px; border-radius: 5px; padding: 1px; display: block; background-color: #ffda61; }
+.SaladBoat-Main-flr { position: relative; display: flex; justify-content: center; align-items: center; font-size: 20px; border-radius: 2px; color: #463c1c; background-color: #ffda61; padding: 7px; cursor: pointer; min-width: 100px; }
+.SaladBoat-Main-flr:not(.SaladBoat-Main-select-title) { display: flex; justify-content: center; align-items: center; font-size: 19px; border-radius: 2px; color: #6d5f33; background-color: #e9cf7c; padding: 4px; cursor: pointer; }
+.SaladBoat-Main-flr:not(.SaladBoat-Main-select-title):hover { background-color: #dbbb50; }
+.SaladBoat-Main-flr:not(.SaladBoat-Main-select-title):focus { background-color: #f0ca4e; }
+.SaladBoat-Main-flr:not(.SaladBoat-Main-select-title):active { background-color: #e2bd42; }
+.SaladBoat-Main-flr.selected:not(.SaladBoat-Main-select-title){ background-color: #ffe797dc; }
+.SaladBoat-Main-flr:active ~ .SaladBoat-Main-flr:not(.SaladBoat-Main-select-title) { display: flex; }
+/* .Main { display: none; }
+.Main-selected {
+    border: 1px solid #cfb86c; border-radius: 3px; background-color: #ffeaa7; color: #a59253; cursor: pointer;
+    position: relative; display: flex; justify-content: center; align-items: center;
+    min-width: var(--Main-width); min-height: var(--Main-height); margin-top: -20px; font-size: var(--Main-fontsize);
+}
+.Main:checked ~ .Main-selected {
+    border: 2px solid #d6b750; border-radius: 3px; background-color: #ffdb65; color: #8f7a36; cursor: pointer;
+    position: relative; display: flex; justify-content: center; align-items: center; z-index: 5;
+}
+.MainTitle { background-color: #ffe283; } */
+/* Secd select */
+.Secd-box { position: absolute; left: var(--Secd-box-left); top: var(--Secd-box-top); --Secd-width: 50px; --Secd-height: 30px; --Secd-fontsize: 20px; }
+.SaladBoat-Secd-box { position: absolute; left: var(--Secd-box-left); top: var(--Secd-box-top); --SaladBoat-Secd-width: 100px; --SaladBoat-Secd-height: 30px; --SaladBoat-Secd-fontsize: 20px; }
+.SaladBoat-Secd-select { position: absolute; left: var(--Secd-box-left); top: var(--Secd-box-top); border: #615632 solid 2px; border-radius: 5px; padding: 1px; display: block; background-color: #ffda61; }
+.SaladBoat-Secd-flr { position: relative; display: flex; justify-content: center; align-items: center; font-size: 20px; border-radius: 2px; color: #463c1c; background-color: #ffda61; padding: 7px; cursor: pointer; min-width: 100px; }
+.SaladBoat-Secd-flr:not(.SaladBoat-Secd-select-title) { display: flex; justify-content: center; align-items: center; font-size: 19px; border-radius: 2px; color: #6d5f33; background-color: #e9cf7c; padding: 4px; cursor: pointer; }
+.SaladBoat-Secd-flr:not(.SaladBoat-Secd-select-title):hover { background-color: #dbbb50; }
+.SaladBoat-Secd-flr:not(.SaladBoat-Secd-select-title):focus { background-color: #f0ca4e; }
+.SaladBoat-Secd-flr:not(.SaladBoat-Secd-select-title):active { background-color: #e2bd42; }
+.SaladBoat-Secd-flr.selected:not(.SaladBoat-Secd-select-title){ background-color: #ffe797dc; }
+.SaladBoat-Secd-flr:active ~ .SaladBoat-Secd-flr:not(.SaladBoat-Secd-select-title) { display: flex; }
+/* .Secd { display: none; }
+.Secd-selected {
+    border: 1px solid #d6b445; border-radius: 3px; background-color: #ffe79af1; color: #b39a4a; cursor: pointer;
+    position: relative; display: flex; justify-content: center; align-items: center; padding: 0px 4px;
+    min-width: var(--Secd-width); min-height: var(--Secd-height); margin-top: -20px; font-size: var(--Secd-fontsize);
+}
+.Secd:checked ~ .Secd-selected {
+    border: 2px solid #ecc33c; border-radius: 3px; background-color: #ffca1bf5; color: #5f4f1c; cursor: pointer;
+    position: relative; display: flex; justify-content: center; align-items: center; z-index: 5;
+}
+.SecdTitle { background-color: #f0cf64; } */
+/* SaladBoat Count */
+.SaladBoat-Count { position: absolute; outline: none; border: #554615 solid 2px; left: -50px; border-radius: 5px; min-height: 20px; min-width: 100px; max-width: 100px; font-family: 'JKU'; font-size: 20px; padding: 5px; color: #50441d; background-color: #dfc56eb4; }
+.SaladBoat-Count:focus { position: absolute; outline: none; border: #9e8739 solid 2px; border-radius: 5px; padding: 5px; color: #705d1e; background-color: #cfae40de; }
+.SaladBoat-Count-Box { position: absolute; top: var(--SaladBoat-Count-top); left: 180px; }
+.SaladBoat-Count-Title { position: absolute; display: flex; justify-content: center; align-items: center; font-size: 15px; min-width: 112px; margin-top: -15px; margin-left: -50px; background-color: #ffd753; border: solid 1px #584c23; border-radius: 5px; z-index: 100; color: #4d3e0f; }
+
+/* ----------------------------------------------------------------- page05 -----------------------------------------------------------------*/
+
+/* Donut select */
+.Donut-box { position: absolute; left: var(--Donut-box-left); top: var(--Donut-box-top); --Donut-width: 100px; --Donut-height: 30px; --Donut-fontsize: 20px; }
+.Donut-select { position: absolute; left: 15px; top: 35px; border: #615632 solid 2px; border-radius: 5px; padding: 1px; display: block; background-color: #ffda61; }
+.Donut-flr { position: relative; display: flex; justify-content: center; align-items: center; font-size: 20px; border-radius: 2px; color: #463c1c; background-color: #ffda61; padding: 7px; cursor: pointer; min-width: 200px; }
+.Donut-flr:not(.Donut-select-title) { display: flex; justify-content: center; align-items: center; font-size: 20px; border-radius: 2px; color: #6d5f33; background-color: #e9cf7c; padding: 6px; cursor: pointer; }
+.Donut-flr:not(.Donut-select-title):hover { background-color: #dbbb50; }
+.Donut-flr:not(.Donut-select-title):focus { background-color: #f0ca4e; }
+.Donut-flr:not(.Donut-select-title):active { background-color: #e2bd42; }
+.Donut-flr.selected:not(.Donut-select-title){ background-color: #ffe797dc; }
+.Donut-flr:active ~ .Donut-flr:not(.Donut-select-title) { display: flex; }
+/* Donut Count */
+.Donut-Count { position: absolute; outline: none; border: #554615 solid 2px; left: -50px; border-radius: 5px; min-height: 20px; min-width: 100px; max-width: 100px; font-family: 'JKU'; font-size: 20px; padding: 5px; color: #50441d; background-color: #dfc56eb4; }
+.Donut-Count:focus { position: absolute; outline: none; border: #9e8739 solid 2px; border-radius: 5px; padding: 5px; color: #705d1e; background-color: #cfae40de; }
+.Donut-Count-Box { position: absolute; top: var(--Donut-Count-top); left: 180px; }
+.Donut-Count-Title { position: absolute; display: flex; justify-content: center; align-items: center; font-size: 15px; min-width: 112px; margin-top: -15px; margin-left: -50px; background-color: #ffd753; border: solid 1px #584c23; border-radius: 5px; z-index: 100; color: #4d3e0f; }
+
+/* ----------------------------------------------------------------- page Order -----------------------------------------------------------------*/
+.ShopCar-page-Order { position: absolute; display: flex; justify-content: center; align-items: center; margin-top: 200px; border-radius: 5px; }
+.page-Order { position: absolute; display: flex; justify-content: center; align-items: center; margin-top: 200px; border-radius: 5px; }
+.ShopCar-Basic-Information { background-color: #ffd13b; border: #6d5916 solid 2px; border-radius: 5px; min-width: 300px; min-height: 150px; transition: all 0.3s; }
+.Basic-Information { background-color: #ffd13b; border: #6d5916 solid 2px; border-radius: 5px; min-width: 300px; min-height: 150px; transition: all 0.3s; }
+.left-lbl { position: absolute; left: 15px; border: #977a18 solid 5px; border-radius: 10px; min-height: 120px; margin-top: 10px; transition: all 0.3s; }
+.Basic-title { position: absolute; display: flex; left: 30px; color: #9c7500; font-size: 30px; border-radius: 10px; min-height: 120px; margin-top: 10px; transition: all 0.3s; }
+.Basic-txt { position: absolute; display: flex; left: 40px; color: #7a6523; font-size: 25px; border-radius: 10px; min-height: 120px; margin-top: 50px; transition: all 0.3s; }
+.Basic_Information:hover { background-color: #ffe07a; border: #7c6827 solid 2px; border-radius: 5px; min-width: 300px; min-height: 150px; transition: all 0.3s; }
+.Basic_Information:hover > .left-lbl { position: absolute; left: 17px; border: #b99b37 solid 5px; border-radius: 10px; min-height: 120px; margin-top: 10px; transition: all 0.3s; }
+.Basic_Information:hover > .Basic-title { position: absolute; display: flex; left: 32px; color: #b18e28; font-size: 30px; border-radius: 10px; min-height: 120px; margin-top: 10px; transition: all 0.6s; }
+.Basic_Information:hover > .Basic-txt { position: absolute; display: flex; left: 43px; color: #997d1f; font-size: 25px; border-radius: 10px; min-height: 120px; margin-top: 50px; transition: all 0.9s; }
+
+.Salad-Order-Box { position: absolute; display: flex; background-color: #e4c356; border: #9e873a solid 2px; border-radius: 5px; min-width: 330px; min-height: 170px; }
+.Salad-Order-Main { position: absolute; display: flex; font-size: 30px; color: #4d3f11; margin-top: 10px; margin-left: 10px; }
+.Salad-Order-Secd { position: absolute; display: flex; font-size: 29px; color: #6d5c25; border-left: 5px solid #b9910d; border-radius: 3px; padding-left: 7px; margin-top: 10px; margin-left: 165px; }
+.Salad-Order-Bread { position: absolute; display: flex; font-size: 28px; color: #645218; border-left: 3px solid #bd9512; border-radius: 3px; padding-left: 5px; margin-top: 50px; margin-left: 10px; }
+.Salad-Order-Salad { position: absolute; display: flex; font-size: 28px; color: #66592f; border-left: 3px solid #886d14; border-radius: 3px; padding-left: 5px; margin-top: 50px; margin-left: 150px; }
+.Salad-Order-OnePrice { position: absolute; display: flex; font-size: 29px; color: #756012; border-left: 3px solid #a07c07; border-radius: 3px; padding-left: 5px; margin-top: 90px; margin-left: 10px; }
+.Salad-Order-Count { position: absolute; display: flex; font-size: 29px; color: #8a762e; border-left: 3px solid #a88c2e; border-radius: 3px; padding-left: 5px; margin-top: 130px; margin-left: 10px; }
+
+.Donut-Order-Box { position: absolute; display: flex; background-color: #e4c356; border: #9e873a solid 2px; border-radius: 5px; min-width: 330px; min-height: 140px; }
+.Donut-Order-FLR { position: absolute; display: flex; font-size: 30px; color: #4d3f11; margin-top: 10px; margin-left: 10px; }
+.Donut-Order-OnePrice { position: absolute; display: flex; font-size: 29px; color: #756012; border-left: 3px solid #a07c07; border-radius: 3px; padding-left: 5px; margin-top: 50px; margin-left: 10px; }
+.Donut-Order-Count { position: absolute; display: flex; font-size: 29px; color: #8a762e; border-left: 3px solid #a88c2e; border-radius: 3px; padding-left: 5px; margin-top: 90px; margin-left: 10px; }
+
+.Total-Price { position: absolute; display: flex; justify-content: center; align-items: center; background-color: #d4bd6f; border-radius: 5px; border: #5e5022 solid 2px; font-size: 30px; min-width: 330px; min-height: 50px; color: #584d28; }
+
+/* ----------------------------------------------------------------- Shop Car -----------------------------------------------------------------*/
+
+.ShopCar-Order { border-radius: 5px; border: 2px solid #b99d40; color: #b39229; background-color: #ffe07cee; cursor: pointer; transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s; }
+.ShopCar-Order:hover { border: 2px solid #a78d3b; color: #9b8230; background-color: #f1cb4ede; transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s; }
+
+.trash { position: absolute; display: flex; justify-content: center; align-items: center; border: none; margin-left: 200px; border-radius: 5px; min-height: 70px; min-width: 75px; cursor: pointer; box-shadow: 0px 0px 2px 2px #756223; background-color: #f7d883; transition: all 0.3s; }
+.trash:hover { box-shadow: 0px 0px 4px 4px #756223; background-color: #f7e5b3; transition: all 0.3s; }
+.trash:active { box-shadow: 0px 0px 1px 1px #756223; background-color: #eec963; transition: all 0.3s; }
+.trashicon { fill: #644114; transition: all 0.3s; margin-top: -25px; }
+.trash:hover > .trashicon { fill: #9c651d; transition: all 0.3s; }
+.trash:active > .trashicon { fill: #694a20; transition: all 0.3s; }
+.trash span { font-family: 'JKU'; position: absolute; margin-top: 40px; font-size: 17px; color: #855b25; transition: all 0.3s; }
+.trash:hover > span { font-family: 'JKU'; position: absolute; margin-top: 40px; font-size: 17.5px; color: #a37f51; transition: all 0.3s; }
+.trash:active > span { font-family: 'JKU'; position: absolute; margin-top: 40px; font-size: 18px; color: #725630; transition: all 0.3s; }
+
+.edit { position: absolute; display: flex; justify-content: center; align-items: center; border: none; margin-left: 280px; border-radius: 5px; min-height: 70px; min-width: 75px; cursor: pointer; box-shadow: 0px 0px 2px 2px #756223; background-color: #f7d883; transition: all 0.3s; }
+.edit:hover { box-shadow: 0px 0px 4px 4px #756223; background-color: #f7e5b3; transition: all 0.3s; }
+.edit:active { box-shadow: 0px 0px 1px 1px #756223; background-color: #eec963; transition: all 0.3s; }
+.editicon { fill: #644114; transition: all 0.3s; margin-top: -25px; }
+.edit:hover > .editicon { fill: #9c651d; transition: all 0.3s; }
+.edit:active > .editicon { fill: #694a20; transition: all 0.3s; }
+.edit span { font-family: 'JKU'; position: absolute; margin-top: 40px; font-size: 17px; color: #855b25; transition: all 0.3s; }
+.edit:hover > span { font-family: 'JKU'; position: absolute; margin-top: 40px; font-size: 17.5px; color: #a37f51; transition: all 0.3s; }
+.edit:active > span { font-family: 'JKU'; position: absolute; margin-top: 40px; font-size: 18px; color: #725630; transition: all 0.3s; }
+

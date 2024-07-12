@@ -1,0 +1,7 @@
+@font-face { font-family: 'JKU'; src: url('font/LXGWWenKaiMonoTC-Regular.ttf'); }
+a { text-decoration: none; color: #291b09; }
+body { background-color: #FFFBEE; margin: 0%; font-family: 'JKU'; user-select: none; -webkit-user-select: none; -moz-user-select: none; overflow-x: auto; overflow-y: auto; }
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar:hover { width: 7px; height: 7px; }
+font { font-family: 'JKU'; color: #756120; }
+.body { display: flex; justify-content: center; align-items: center; }

@@ -4,19 +4,444 @@
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1" name="viewport">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="js/js3.7.1.js"></script>
     <link rel="icon" href="img/icon.ico" type="img/x-icon" />
+
+    <!-- UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="basic-css.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="form-basic.css">
 	<title>JKU workshop</title>
-	</script>
 </head>
 <body class="body">
-	<div class="float-box"><img src="img/icon.jpg" class="float-icon"></div>
-    <div class="textInputName TIN-name"><input placeholder="訂貨人姓名" type="text" class="textInput"></div>
-    <script>
-        var float_icon_side = 50;
-        $(".float-icon").css("width", float_icon_side);
-        $(".float-icon").css("height", float_icon_side);
-        $(".TIN-name").css("margin-top", float_icon_side + 5);
+    <div class="form-basic page01">
+        <div class="form-title">基本資訊</div>
+        <div class="form-text-box">
+            <input type="text" class="form-text page01-name">
+            <div class="form-text-title">訂貨人姓名</div>
+        </div>
+        <div class="form-select-box">
+            <label class="select-pos-box"><input type="radio" name="select-pos" class="select-pos" value="取貨地點" disabled /><span class="select-pos-selected select-pos-selected-title"><span class="select-pos-text">取貨地點</span></span></label><br>
+            <label class="select-pos-box"><input type="radio" name="select-pos" class="select-pos" value="內湖店面" checked /><span class="select-pos-selected"><span class="select-pos-text">內湖店面</span></span></label><br>
+            <label class="select-pos-box"><input type="radio" name="select-pos" class="select-pos" value="興華高中" /><span class="select-pos-selected"><span class="select-pos-text">興華高中</span></span></label><br>
+            <label class="select-pos-box"><input type="radio" name="select-pos" class="select-pos" value="三民國中" /><span class="select-pos-selected"><span class="select-pos-text">三民國中</span></span></label><br>
+        </div>
+        <button class="form-nextpage-btn-one form-nextpage-btn-page01">下一頁<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="45" height="45" class="form-nextpage-btn-one-icon"><path d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z"/></svg></button>
+        <button class="form-nextpage-btn-one edit-basic-btn" style="font-size: 27px;">&nbsp;確認&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="45" height="45" class="form-nextpage-btn-one-icon"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+    </div>
+
+    <div class="form-basic page02">
+        <div class="form-title">取貨日期</div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="30" height="30" class="date-left"><path d="M448 96c0-35.3-28.7-64-64-64L64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320zM320 256c0 6.7-2.8 13-7.7 17.6l-112 104c-7 6.5-17.2 8.2-25.9 4.4s-14.4-12.5-14.4-22l0-208c0-9.5 5.7-18.2 14.4-22s18.9-2.1 25.9 4.4l112 104c4.9 4.5 7.7 10.9 7.7 17.6z"/></svg>
+        <div class="date-title"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="30" height="30" class="date-right"><path d="M448 96c0-35.3-28.7-64-64-64L64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320zM320 256c0 6.7-2.8 13-7.7 17.6l-112 104c-7 6.5-17.2 8.2-25.9 4.4s-14.4-12.5-14.4-22l0-208c0-9.5 5.7-18.2 14.4-22s18.9-2.1 25.9 4.4l112 104c4.9 4.5 7.7 10.9 7.7 17.6z"/></svg>
+        <span class="date-line" style="margin-top: 40px;"></span>
+        <div class="date-word-title"></div>
+        <div class="date-word-date"></div>
+        <span class="date-line" style="margin-top: 80px; opacity: 0.4;"></span>
+        <button class="form-frontpage-btn form-frontpage-btn-page02"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="45" height="45" class="form-frontpage-btn-icon"><path d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z"/></svg>上一頁</button>
+        <button class="form-nextpage-btn form-nextpage-btn-page02">下一頁<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="45" height="45" class="form-nextpage-btn-icon"><path d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z"/></svg></button>
+        <button class="form-nextpage-btn-one edit-date-btn" style="font-size: 27px;">&nbsp;確認&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="45" height="45" class="form-nextpage-btn-one-icon"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+    </div>
+
+    <div class="form-basic page03">
+        <div class="form-title">訂單類型</div>
+        <button class="order-type saladboat-selected">沙拉船<br>（營養三明治）</button>
+        <button class="order-type donut-selected" style="margin-top: 80px;">甜甜圈</button>
+        <button class="shop-car"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="50" height="50" class="shop-car-icon"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>購物車</button>
+        <button class="form-frontpage-btn form-frontpage-btn-page03"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="45" height="45" class="form-frontpage-btn-icon"><path d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z"/></svg>上一頁</button>
+        <button class="form-nextpage-btn form-nextpage-btn-page03" style="font-size: 27px;">&nbsp;下訂&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="45" height="45" class="form-nextpage-btn-icon"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+    </div>
+
+    <div class="form-basic page04">
+        <div class="form-title" style="font-size: 35px;">沙拉船訂單</div>
+        <!-- <div class="form-small-title">（營養三明治）</div> -->
+        <div class="Bread-type-Box">
+            <label class="Bread-type-box" style="margin-left: 0px;"><input type="radio" name="Bread-type" class="Bread-type" value="炸麵包體" checked /><span class="Bread-type-selected"><span class="Bread-type-text">炸麵包體</span></span></label><br>
+            <label class="Bread-type-box" style="margin-left: 0px; margin-top: 26px;"><input type="radio" name="Bread-type" class="Bread-type" value="烤麵包體" /><span class="Bread-type-selected"><span class="Bread-type-text">烤麵包體</span></span></label><br>
+        </div>
+        <div class="Salad-Box">
+            <label class="Salad-box" style="margin-left: 100px;"><input type="radio" name="Salad" class="Salad" value="要沙拉" checked /><span class="Salad-selected"><span class="Salad-text">要沙拉</span></span></label><br>
+            <label class="Salad-box" style="margin-left: 100px; margin-top: 26px;"><input type="radio" name="Salad" class="Salad" value="不要沙拉" /><span class="Salad-selected"><span class="Salad-text">不要沙拉</span></span></label><br>
+        </div>
+        <div class="Main-Box">
+            <ul class="SaladBoat-Main-select">
+                <li class="SaladBoat-Main-flr SaladBoat-Main-select-title" value="主菜" selected disabled>主菜</li>
+                <li class="SaladBoat-Main-flr" value="照燒豬肉絲">照燒豬肉絲</li>
+                <li class="SaladBoat-Main-flr" value="烤雞肉絲">烤雞肉絲</li>
+                <li class="SaladBoat-Main-flr" value="熱狗薯餅">熱狗薯餅</li>
+                <li class="SaladBoat-Main-flr" value="火腿起司">火腿起司</li>
+                <li class="SaladBoat-Main-flr" value="卡拉雞腿">卡拉雞腿</li>
+            </ul>
+            <!-- <label class="Main-box" style="margin-left: 0px;"><input type="radio" name="Main" class="Main" value="主菜" disabled checked /><span class="Main-selected MainTitle" style="min-width: 60px;"><span class="Main-text">主菜</span></span></label><br>
+            <label class="Main-box" style="margin-left: 60px;"><input type="radio" name="Main" class="Main" value="照燒豬肉絲" /><span class="Main-selected" style="min-width: 140px;"><span class="Main-text">照燒豬肉絲</span></span></label><br>
+            <label class="Main-box" style="margin-left: 0px; margin-top: 30px;"><input type="radio" name="Main" class="Main" value="烤雞肉絲" /><span class="Main-selected"><span class="Main-text">烤雞肉絲</span></span></label><br>
+            <label class="Main-box" style="margin-left: 100px; margin-top: 30px;"><input type="radio" name="Main" class="Main" value="熱狗薯餅" /><span class="Main-selected"><span class="Main-text">熱狗薯餅</span></span></label><br>
+            <label class="Main-box" style="margin-left: 0px; margin-top: 60px;"><input type="radio" name="Main" class="Main" value="火腿起司" /><span class="Main-selected"><span class="Main-text">火腿起司</span></span></label><br>
+            <label class="Main-box" style="margin-left: 100px; margin-top: 60px;"><input type="radio" name="Main" class="Main" value="卡拉雞腿" /><span class="Main-selected"><span class="Main-text">卡拉雞腿</span></span></label><br> -->
+        </div>
+        <div class="Secd-Box">
+            <ul class="SaladBoat-Secd-select">
+                <li class="SaladBoat-Secd-flr SaladBoat-Secd-select-title" value="配菜" selected disabled>配菜</li>
+                <li class="SaladBoat-Secd-flr" value="洋蔥(微炒)">洋蔥(微炒)</li>
+                <li class="SaladBoat-Secd-flr" value="生洋蔥">生洋蔥</li>
+                <li class="SaladBoat-Secd-flr" value="酸菜">酸菜</li>
+                <li class="SaladBoat-Secd-flr" value="玉米">玉米</li>
+            </ul>
+            <!-- <label class="Secd-box" style="margin-left: 0px;"><input type="radio" name="Secd" class="Secd" value="配菜" disabled checked /><span class="Secd-selected SecdTitle"><span class="Secd-text">配菜</span></span></label><br>
+            <label class="Secd-box" style="margin-left: 58px;"><input type="radio" name="Secd" class="Secd" value="洋蔥(微炒)" /><span class="Secd-selected" style="min-width: 118px;"><span class="Secd-text">洋蔥(微炒)</span></span></label><br>
+            <label class="Secd-box" style="margin-left: 0px; margin-top: 30px;"><input type="radio" name="Secd" class="Secd" value="生洋蔥" /><span class="Secd-selected"><span class="Secd-text">生洋蔥</span></span></label><br>
+            <label class="Secd-box" style="margin-left: 68px; margin-top: 30px;"><input type="radio" name="Secd" class="Secd" value="酸菜" /><span class="Secd-selected"><span class="Secd-text">酸菜</span></span></label><br>
+            <label class="Secd-box" style="margin-left: 126px; margin-top: 30px;"><input type="radio" name="Secd" class="Secd" value="玉米" /><span class="Secd-selected"><span class="Secd-text">玉米</span></span></label><br> -->
+        </div>
+        <div class="SaladBoat-Count-Box"><label class="SaladBoat-Count-Title">購買數量</label><input type="text" class="SaladBoat-Count" oninput="value=value.replace(/[^\d]/g,'')"></div>
+        <button class="form-frontpage-btn form-frontpage-btn-page04"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="45" height="45" class="form-frontpage-btn-icon"><path d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z"/></svg>上一頁</button>
+        <button class="form-nextpage-btn form-nextpage-btn-page04" style="font-size: 27px;">&nbsp;確認&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="45" height="45" class="form-nextpage-btn-icon"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+    </div>
+    
+    <div class="form-basic page05">
+        <div class="form-title" style="font-size: 35px;">甜甜圈訂單</div>
+        <div class="Donut-Box">
+            <ul class="Donut-select">
+                <li class="Donut-flr Donut-select-title" value="甜甜圈口味" selected disabled>甜甜圈口味</li>
+                <li class="Donut-flr" value="原味甜甜圈">原味甜甜圈</li>
+                <li class="Donut-flr" value="紅豆甜甜圈">紅豆甜甜圈</li>
+                <li class="Donut-flr" value="芋頭甜甜圈">芋頭甜甜圈</li>
+                <li class="Donut-flr" value="酸菜甜甜圈">酸菜甜甜圈</li>
+                <li class="Donut-flr" value="巧克力卡士達甜甜圈">巧克力卡士達甜甜圈</li>
+            </ul>
+        </div>
+        <div class="Donut-Count-Box"><label class="Donut-Count-Title">購買數量</label><input type="text" class="Donut-Count" oninput="value=value.replace(/[^\d]/g,'')"></div>
+        <button class="form-frontpage-btn form-frontpage-btn-page05"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="45" height="45" class="form-frontpage-btn-icon"><path d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z"/></svg>上一頁</button>
+        <button class="form-nextpage-btn form-nextpage-btn-page05" style="font-size: 27px;">&nbsp;確認&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="45" height="45" class="form-nextpage-btn-icon"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg></button>
+    </div>
+
+    <div class="ShopCar-page-Order"></div>
+
+    <div class="page-Order">
+        <div class="Basic-Information"><span class="left-lbl"></span><label class="Basic-title">基本資訊</label></div>
+        <section style="position: absolute; margin-top: 170px; left: -15px;" class="Salad-Order-BBox"></section>
+        <section style="position: absolute; margin-top: 170px; left: -15px;" class="Donut-Order-BBox"></section>
+    </div>
+
+    <script> // show
+        $(".form-basic").hide();
+
+        $(".page01").show(); $(".edit-basic-btn").hide(); $(".form-nextpage-btn-page01").show() // name, pos
+        $(".page02").hide(); // date_selected
+        $(".page03").hide();
+        $(".page04").hide(); // SaladBoat_Order
+        $(".page05").hide(); // Donut_Order
+        $(".page-Order").hide();
+        $(".ShopCar-page-Order").hide();
+    </script>
+    <script> // front / next
+        function page01next() { $(".page01").hide(); $(".page02").show(); $(".edit-date-btn").hide(); $(".form-nextpage-btn-page02").show(); }
+        function page02front() { $(".page02").hide(); $(".page01").show(); $(".edit-basic-btn").hide(); $(".form-nextpage-btn-page01").show(); }
+        function page02next() { $(".page02").hide(); $(".page03").show(); }
+        function page03front() { $(".page03").hide(); $(".page02").show(); $(".edit-date-btn").hide(); $(".form-nextpage-btn-page02").show(); }
+        function page03next() { $(".page03").hide(); $(".page-Order").show(); }
+        function page03_saladboat_selected() { $(".page03").hide(); $(".page04").show(); }
+        function page03_donut_selected() { $(".page03").hide(); $(".page05").show(); }
+        function page03_shopcar() { $(".page03").hide(); $(".ShopCar-page-Order").show(); }
+        function page04front() { $(".page04").hide(); $(".page03").show(); }
+        function page04next() { $(".page04").hide(); $(".page03").show(); }
+        function page05front() { $(".page05").hide(); $(".page03").show(); }
+        function page05next() { $(".page05").hide(); $(".page03").show(); }
+
+        function ShopCar_Page02() { $(".ShopCar-page-Order").hide(); $(".page02").show(); $(".form-frontpage-btn-page02").hide(); makedate((parseInt(select_date.substr(0, 4))), (parseInt(select_date.substr(5, 2)) - 1), (((parseInt(select_date.substr(5, 2)) - 1) == new Date().getMonth()) ? new Date().getDate() : (parseInt(select_date.substr(8, 2))))); $(".edit-date-btn").show(); $(".form-nextpage-btn-page02").hide(); }
+        function Page02_ShopCar() { $(".ShopCar-page-Order").show(); $(".page02").hide(); ShopCar_Page_Order(); $(".form-frontpage-btn-page02").show(); }
+
+        function ShopCar_Page01() { $(".ShopCar-page-Order").hide(); $(".page01").show(); $(".edit-basic-btn").show(); $(".form-nextpage-btn-page01").hide(); }
+        function Page01_ShopCar() { $(".ShopCar-page-Order").show(); $(".page01").hide(); ShopCar_Page_Order(); }
+    </script>
+    <script> // value
+        var saladboat=["照燒豬肉絲", "烤雞肉絲", "熱狗薯餅", "火腿起司", "卡拉雞腿"];
+        var saladboat_price=[50, 50, 50, 50, 60];
+        var donut=["原味甜甜圈", "紅豆甜甜圈", "芋頭甜甜圈", "酸菜甜甜圈", "巧克力卡士達甜甜圈"];
+        var donut_price=[15, 25, 25, 25, 25];
+        var no_open_dayofweek = [1, 7];
+        var no_open_date = ["[2024, 7, 6]"];
+        var name, pos, date_selected;
+        var SaladBoat_Order = new Array();
+        var Donut_Order = new Array();
+    </script>
+    <script> // price
+        function price(name, cnt) {
+            if (saladboat.indexOf(name) == -1) return donut_price[ donut.indexOf(name) ] * cnt;
+            else return saladboat_price[ saladboat.indexOf(name) ] * cnt;
+        }
+    </script>
+    <script> // Order 2array LaTex
+        function run2array(v) {
+            var pgs, rtn = "";
+            for(i = 0; i < v.length; i++) {
+                pgs = "[ ";
+                for(j = 0; j < v[i].length - 1; j++) pgs += ( v[i][j] + " , ");
+                pgs += ( v[i][ v[i].length - 1 ] + " ]" ), rtn += pgs, rtn += "\n";
+            } return rtn;
+        }
+    </script>
+
+    <script> // Basic information
+        $(".form-nextpage-btn-page01").on("click", function(){
+            name = $(".page01-name").val();
+            pos = $('input[name="select-pos"]:checked').val();
+            if (name == "") alert("請填寫訂貨人姓名");
+            else page01next();
+        });
+        $(".edit-basic-btn").on("click", function(){
+            name = $(".page01-name").val();
+            pos = $('input[name="select-pos"]:checked').val();
+            if (name == "") alert("請填寫訂貨人姓名");
+            else Page01_ShopCar();
+        });
+    </script>
+    <script> // Date select
+        var now_date_Year, now_date_Month, now_date_Date, select_date = "no", now_no = new Array();
+        makedate(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+        function makedate(year, month, date) {
+            $(".date-word-title").empty(), $(".date-word-date").empty(), now_no = new Array();
+            var dateofweek_title = ["日", "一", "二", "三", "四", "五", "六"];
+            for(i = 0; i < dateofweek_title.length; i++) $(".date-word-title").append(`<label class="dateofweek-title">`+(dateofweek_title[i])+`</label>`);
+            var now_month_date = new Date(year, month, date);
+            var today = now_month_date.getDate(), lastday = new Date(now_month_date.getFullYear(), now_month_date.getMonth() + 1, 0).getDate();
+            now_month_date = new Date(now_month_date.getFullYear(), now_month_date.getMonth(), 1);
+            $(".date-title").text(now_month_date.getFullYear() + "年 "+ (now_month_date.getMonth() + 1) +"月");
+            now_date_Year = now_month_date.getFullYear(), now_date_Month = now_month_date.getMonth(), now_date_Date = date;
+            for(i = 1; i <= lastday; i++) {
+                var for_now = new Date(now_month_date.getFullYear(), now_month_date.getMonth(), i);
+                $(".date-word-date").append(`<label class="date-word"><div class="date-word-bg"></div>`+(i)+`</label>`);
+                if (for_now.getDay() == 0) $(".date-word:eq("+(i - 1)+")").css("left", ""+(((i < 10) ? "-109" : "-114"))+"px");
+                if (for_now.getDay() == 1) $(".date-word:eq("+(i - 1)+")").css("left", ""+(((i < 10) ? "-78" : "-83"))+"px");
+                if (for_now.getDay() == 2) $(".date-word:eq("+(i - 1)+")").css("left", ""+(((i < 10) ? "-47" : "-52"))+"px");
+                if (for_now.getDay() == 3) $(".date-word:eq("+(i - 1)+")").css("left", ""+(((i < 10) ? "-16" : "-21"))+"px");
+                if (for_now.getDay() == 4) $(".date-word:eq("+(i - 1)+")").css("left", ""+(((i < 10) ? "15" : "10"))+"px");
+                if (for_now.getDay() == 5) $(".date-word:eq("+(i - 1)+")").css("left", ""+(((i < 10) ? "48" : "43"))+"px");
+                if (for_now.getDay() == 6) $(".date-word:eq("+(i - 1)+")").css("left", ""+(((i < 10) ? "80" : "75"))+"px");
+                if (no_open_dayofweek.indexOf(for_now.getDay() || for_now.getDay() + 7) != -1) $(".date-word-bg:eq("+(i - 1)+")").css("background-color", "#614a00"), $(".date-word-bg:eq("+(i - 1)+")").css("cursor", "not-allowed"), now_no.push(i);
+                if (no_open_date.indexOf("["+year+", "+(month + 1)+", "+i+"]") != -1) $(".date-word-bg:eq("+(i - 1)+")").css("background-color", "#614a00"), $(".date-word-bg:eq("+(i - 1)+")").css("cursor", "not-allowed"), now_no.push(i);
+                if (now_date_Year < new Date().getFullYear() || (now_date_Year == new Date().getFullYear() && now_date_Month < new Date().getMonth()) || (now_date_Month == new Date().getMonth() && i <= new Date().getDate())) $(".date-word-bg:eq("+(i - 1)+")").css("background-color", "#614a00"), $(".date-word-bg:eq("+(i - 1)+")").css("cursor", "not-allowed"), now_no.push(i);
+                if (i < 10) $(".date-word-bg:eq("+(i - 1)+")").css("margin-left", "-8px");
+                else $(".date-word-bg:eq("+(i - 1)+")").css("margin-left", "-3px");
+                if (for_now.getDay() == 6) $(".date-word-date").append(`<div class="new-line"></div>`);
+            }
+            if (select_date != "no" && (parseInt(select_date.substr(5, 2)) - 1) == now_date_Month) $(".date-word-bg:eq("+(parseInt(select_date.substr(8, 2)) - 1)+")").css("background-color", "#ffc400");
+        }
+        $(".date-left").click(function(){ makedate(now_date_Year, now_date_Month - 1, (new Date().getMonth() == now_date_Month - 1) ? new Date().getDate() : 1); });
+        $(".date-right").click(function(){ makedate(now_date_Year, now_date_Month + 1, (new Date().getMonth() == now_date_Month + 1) ? new Date().getDate() : 1); });
+        $(".date-word-date").on("click", '.date-word', function(){ 
+            if(now_no.indexOf(parseInt($(this).text())) == -1 && ($(this).text() != parseInt(select_date.substr(8, 2)) || ((parseInt(select_date.substr(5, 2)) - 1) != now_date_Month && $(this).text() == parseInt(select_date.substr(8, 2))))) {
+                $(".date-word-bg:eq("+($(this).text() - 1)+")").css("background-color", "#ffc400");
+                if (select_date != "no" && (parseInt(select_date.substr(5, 2)) - 1) == now_date_Month) $(".date-word-bg:eq("+(select_date.substr(8, 2) - 1)+")").css("background-color", "#dab84750");
+                select_date = now_date_Year + "-" + (((now_date_Month % 12) < 10 ? "0" : "") + parseInt((now_date_Month % 12) + 1)) + "-" + (($(this).text() < 10 ? "0" : "") + parseInt($(this).text()));
+            }
+        });
+        $(".form-frontpage-btn-page02").on("click", function(){ page02front(); });
+        $(".form-nextpage-btn-page02").on("click", function(){
+            date_selected = select_date;
+            if (date_selected == "no") alert("請選擇取貨日期");
+            else page02next();
+        });
+        $(".edit-date-btn").on("click", function(){
+            date_selected = select_date;
+            if (date_selected == "no") alert("請選擇取貨日期");
+            else Page02_ShopCar();
+        });
+    </script>
+    <script> // Order type
+        $(".page03").on("click", '.saladboat-selected', function(){ page03_saladboat_selected(); });
+        $(".page03").on("click", '.donut-selected', function(){ page03_donut_selected(); });
+        $(".page03").on("click", '.shop-car', function(){  ShopCar_Page_Order(), page03_shopcar(); });
+        $(".form-frontpage-btn-page03").on("click", function(){ page03front(); });
+        $(".form-nextpage-btn-page03").on("click", function(){
+            if(SaladBoat_Order.length > 0 || Donut_Order.length > 0) {
+                $.ajax({
+                    url: "https://docs.google.com/forms/d/e/1FAIpQLSd4VEYDBUonwQQv28Bv_RJehkmXpZeEduFAQTKrcF3qdxkHig/formResponse",
+                    crossDomain: true,
+                    data: {
+                        "entry.333575947": name, 
+                        "entry.559460511": pos,
+                        "entry.978774972": date_selected,
+                        "entry.1477309875": run2array(SaladBoat_Order),
+                        "entry.2060298183": run2array(Donut_Order),
+                    },
+                    type: "POST",
+                    dataType: "JSONP",
+                    complete: function () {
+                        page03next();
+                        Page_Order();
+                    }
+                });
+            }
+        });
+    </script>
+    <script> // Salad Order
+        // Main
+        $(".SaladBoat-Main-select-title").closest(".SaladBoat-Main-select").children(".SaladBoat-Main-flr:not(.SaladBoat-Main-select-title)").toggle();
+        $(".SaladBoat-Count").on("focus", function(){ $(".SaladBoat-Main-select-title").closest(".SaladBoat-Main-select").children(".SaladBoat-Main-flr:not(.SaladBoat-Main-select-title)").toggle(false); });
+        $('input[name="Bread-type"]').on("click", function(){ $(".SaladBoat-Main-select-title").closest(".SaladBoat-Main-select").children(".SaladBoat-Main-flr:not(.SaladBoat-Main-select-title)").toggle(false); });
+        $('input[name="Salad"]').on("click", function(){ $(".SaladBoat-Main-select-title").closest(".SaladBoat-Main-select").children(".SaladBoat-Main-flr:not(.SaladBoat-Main-select-title)").toggle(false); });
+        $(".SaladBoat-Secd-select-title").on("click", function(){ $(".SaladBoat-Main-select-title").closest(".SaladBoat-Main-select").children(".SaladBoat-Main-flr:not(.SaladBoat-Main-select-title)").toggle(false); });
+        $(".SaladBoat-Main-select").on("click", ".SaladBoat-Main-select-title", function(){ $(this).closest(".SaladBoat-Main-select").children(".SaladBoat-Main-flr:not(.SaladBoat-Main-select-title)").toggle(); });
+        var SaladBoat_Main_Option = $(".SaladBoat-Main-select").children(".SaladBoat-Main-flr:not(.SaladBoat-Main-select-title)");
+        $(".SaladBoat-Main-select").on("click", ".SaladBoat-Main-flr:not(.SaladBoat-Main-select-title)", function(){
+            SaladBoat_Main_Option.removeClass("selected"), $(this).addClass('selected');
+            $(".SaladBoat-Main-select").children(".SaladBoat-Main-select-title").html($(this).html());
+            SaladBoat_Main_Option.toggle(false);
+        });
+        // Secd
+        $(".SaladBoat-Secd-select-title").closest(".SaladBoat-Secd-select").children(".SaladBoat-Secd-flr:not(.SaladBoat-Secd-select-title)").toggle();
+        $(".SaladBoat-Count").on("focus", function(){ $(".SaladBoat-Secd-select-title").closest(".SaladBoat-Secd-select").children(".SaladBoat-Secd-flr:not(.SaladBoat-Secd-select-title)").toggle(false); });
+        $('input[name="Bread-type"]').on("click", function(){ $(".SaladBoat-Secd-select-title").closest(".SaladBoat-Secd-select").children(".SaladBoat-Secd-flr:not(.SaladBoat-Secd-select-title)").toggle(false); });
+        $('input[name="Salad"]').on("click", function(){ $(".SaladBoat-Secd-select-title").closest(".SaladBoat-Secd-select").children(".SaladBoat-Secd-flr:not(.SaladBoat-Secd-select-title)").toggle(false); });
+        $(".SaladBoat-Main-select-title").on("click", function(){ $(".SaladBoat-Secd-select-title").closest(".SaladBoat-Secd-select").children(".SaladBoat-Secd-flr:not(.SaladBoat-Secd-select-title)").toggle(false); });
+        $(".SaladBoat-Secd-select").on("click", ".SaladBoat-Secd-select-title", function(){ $(this).closest(".SaladBoat-Secd-select").children(".SaladBoat-Secd-flr:not(.SaladBoat-Secd-select-title)").toggle(); });
+        var SaladBoat_Secd_Option = $(".SaladBoat-Secd-select").children(".SaladBoat-Secd-flr:not(.SaladBoat-Secd-select-title)");
+        $(".SaladBoat-Secd-select").on("click", ".SaladBoat-Secd-flr:not(.SaladBoat-Secd-select-title)", function(){
+            SaladBoat_Secd_Option.removeClass("selected"), $(this).addClass('selected');
+            $(".SaladBoat-Secd-select").children(".SaladBoat-Secd-select-title").html($(this).html());
+            SaladBoat_Secd_Option.toggle(false);
+        });
+        //
+        function clear_SaladBoat() {
+            $('input[name="Bread-type"]:eq(0)').prop("checked", true), $('input[name="Salad"]:eq(0)').prop("checked", true), $('.SaladBoat-Count').val(""),
+            SaladBoat_Main_Option.removeClass("selected"), $("SaladBoat-Main-flr:eq(0)").addClass('selected'), $(".SaladBoat-Main-select").children(".SaladBoat-Main-select-title").html("主菜"), SaladBoat_Secd_Option.toggle(false);
+            SaladBoat_Secd_Option.removeClass("selected"), $("SaladBoat-Secd-flr:eq(0)").addClass('selected'), $(".SaladBoat-Secd-select").children(".SaladBoat-Secd-select-title").html("配菜");
+        }
+        $(".form-frontpage-btn-page04").on("click", function(){ clear_SaladBoat(), page04front(); });
+        $(".form-nextpage-btn-page04").on("click", function(){
+            var Bread_type = $('input[name="Bread-type"]:checked').val();
+            var Salad = $('input[name="Salad"]:checked').val();
+            var Main = $('.SaladBoat-Main-select-title').text();
+            var Secd = $('.SaladBoat-Secd-select-title').text();
+            var Count = $('.SaladBoat-Count').val();
+            var Order_record = new Array();
+            if (Main == "主菜") alert("請選擇沙拉船主菜");
+            else if (Secd == "配菜") alert("請選擇沙拉船配菜");
+            else if (Count == "") alert("請輸入購買數量");
+            else clear_SaladBoat(), Order_record.push(Bread_type, Salad, Main, Secd, Count), SaladBoat_Order.push(Order_record), alert(Bread_type + "\n" + Main + " + " + Secd + "\n" + Salad + "\n數量：" + Count + " 份\n單價：" + price(Main, 1) + "元\n總計：" + price(Main, Count) + "元"), page04next();
+        });
+    </script>
+    <script> // Donut Order
+        $(".Donut-select-title").closest(".Donut-select").children(".Donut-flr:not(.Donut-select-title)").toggle();
+        $(".Donut-Count").on("focus", function(){ $(".Donut-select-title").closest(".Donut-select").children(".Donut-flr:not(.Donut-select-title)").toggle(false); });
+        $(".Donut-select").on("click", ".Donut-select-title", function(){ $(this).closest(".Donut-select").children(".Donut-flr:not(.Donut-select-title)").toggle(); });
+        var Donut_Option = $(".Donut-select").children(".Donut-flr:not(.Donut-select-title)");
+        $(".Donut-select").on("click", ".Donut-flr:not(.Donut-select-title)", function(){
+            Donut_Option.removeClass("selected"), $(this).addClass('selected');
+            $(".Donut-select").children(".Donut-select-title").html($(this).html());
+            Donut_Option.toggle(false);
+        });
+        
+        function clear_Donut() { $('.Donut-Count').val(""), Donut_Option.removeClass("selected"), $(".Donut-flr:eq(0)").addClass('selected'), $(".Donut-select").children(".Donut-select-title").html("甜甜圈口味"), Donut_Option.toggle(false); }
+        $(".form-frontpage-btn-page05").on("click", function(){ clear_Donut(), page05front(); });
+        $(".form-nextpage-btn-page05").on("click", function(){
+            var Donut_selected = $('.Donut-select-title').text();
+            var Count = $('.Donut-Count').val();
+            var Order_record = new Array();
+
+            if (Donut_selected == "甜甜圈口味") alert("請選擇甜甜圈口味");
+            else if (Count == "") alert("請輸入購買數量");
+            else clear_Donut(), Order_record.push(Donut_selected, Count), Donut_Order.push(Order_record), alert(Donut_selected + "\n數量：" + Count + " 份\n單價：" + price(Donut_selected, 1) + "元\n總計：" + price(Donut_selected, Count) + "元"), page05next();
+        });
+    </script>
+
+    <script> // Shop Car
+        function ShopCar_Page_Order() {
+            $(".ShopCar-page-Order").empty();
+            $(".ShopCar-page-Order").append(`
+                <div class="ShopCar-Basic-Information"><span class="left-lbl"></span><label class="Basic-title">基本資訊</label></div>
+                <section style="position: absolute; margin-top: 170px; left: -15px;" class="ShopCar-Salad-Order-BBox"></section>
+                <section style="position: absolute; margin-top: 170px; left: -15px;" class="ShopCar-Donut-Order-BBox"></section>
+            `);
+            $(".ShopCar-Basic-Information").append(`<button class="Basic-edit edit" style="margin-top: 0px; margin-left: 225px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30" class="editicon"><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg><span>編輯資訊</span></button>`);
+            $(".ShopCar-Basic-Information").append(`<label class="Basic-txt" style="margin-top: 50px;">姓名：`+(name)+`</label>`);
+            $(".ShopCar-Basic-Information").append(`<label class="Basic-txt" style="margin-top: 80px;">取貨地點：`+(pos)+`</label>`);
+            $(".ShopCar-Basic-Information").append(`<label class="Basic-txt" style="margin-top: 110px;">取貨日期：`+(date_selected)+`</label>`);
+            var total_price = 0;
+            for(i = 0; i < SaladBoat_Order.length; i++) {
+                $(".ShopCar-Salad-Order-BBox").append(`
+                <div class="Salad-Order-Box" style="margin-top: `+(180 * i)+`px;">
+                    <span class="Salad-Order-Main">`+(SaladBoat_Order[i][2])+`</span>
+                    <span class="Salad-Order-Secd">`+(SaladBoat_Order[i][3])+`</span>
+                    <span class="Salad-Order-Bread">`+(SaladBoat_Order[i][0])+`</span>
+                    <span class="Salad-Order-Salad">`+(SaladBoat_Order[i][1])+`</span>
+                    <span class="Salad-Order-OnePrice">單價 `+(price(SaladBoat_Order[i][2], 1))+` 元</span>
+                    <span class="Salad-Order-Count">數量：`+(SaladBoat_Order[i][4])+` 份</span>
+                    <button class="Salad-Order-delete trash" value="`+(i)+`" style="margin-top: 100px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="30" height="30" class="trashicon"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"/></svg><span>刪除訂單</span></button>
+                    <button class="Salad-Order-edit edit" value="`+(i)+`" style="margin-top: 100px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30" class="editicon"><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg><span>編輯訂單</span></button>
+                </div>
+                `);
+                total_price += ((price(SaladBoat_Order[i][2], 1)) * (SaladBoat_Order[i][4]));
+            }
+            for(i = 0; i < Donut_Order.length; i++) {
+                $(".ShopCar-Donut-Order-BBox").append(`
+                <div class="Donut-Order-Box" style="margin-top: `+((180 * (SaladBoat_Order.length)) + (150 * i))+`px;">
+                    <span class="Donut-Order-FLR">`+(Donut_Order[i][0])+`</span>
+                    <span class="Donut-Order-OnePrice">單價 `+(price(Donut_Order[i][0], 1))+` 元</span>
+                    <span class="Donut-Order-Count">數量：`+(Donut_Order[i][1])+` 個</span>
+                    <button class="Donut-Order-delete trash" value="`+(i)+`" style="margin-top: 70px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="30" height="30" class="trashicon"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"/></svg><span>刪除訂單</span></button>
+                    <button class="Donut-Order-edit edit" value="`+(i)+`" style="margin-top: 70px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30" class="editicon"><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg><span>編輯訂單</span></button>
+                </div>
+                `);
+                total_price += ((price(Donut_Order[i][0], 1)) * (Donut_Order[i][1]));
+            }
+            if(SaladBoat_Order.length + Donut_Order.length > 0) $(".ShopCar-Donut-Order-BBox").append(`<span class="Total-Price" style="margin-top: `+((180 * (SaladBoat_Order.length)) + (150 * (Donut_Order.length)))+`px;">總計 ` + total_price + ` 元<section class="ShopCar-Order" style="position: absolute; margin-top: 105px; left: 125px; font-size: 30px; padding: 10px;">前往訂餐頁面</section></span>`);
+            else $(".ShopCar-page-Order").append(`<section style="position: absolute; margin-top: 220px; left: 5px; font-size: 30px; padding: 10px; border-radius: 5px; border: 2px solid #a59359; color: #e2b520; background-color: #ffefb9d7;">您還未下訂任何餐點</section><section class="ShopCar-Order" style="position: absolute; margin-top: 330px; left: 90px; font-size: 30px; padding: 10px;">前往訂餐頁面</section>`);
+            $(".ShopCar-page-Order").on("click", ".ShopCar-Order", function(){ $(".ShopCar-page-Order").hide(), $(".page03").show(); });
+            $(".Salad-Order-Box").on("click", ".Salad-Order-delete", function(){ Sure = confirm('是否確認刪除此訂單'); if(Sure) var now = $(this).val(); SaladBoat_Order.splice(now, now + 1), ShopCar_Page_Order(); });
+            $(".Donut-Order-Box").on("click", ".Donut-Order-delete", function(){ Sure = confirm('是否確認刪除此訂單'); if(Sure) var now = $(this).val(); Donut_Order.splice(now, now + 1), ShopCar_Page_Order(); });
+
+            $(".ShopCar-Basic-Information").on("click", ".Basic-edit", function(){
+                $(".ShopCar-page-Order").append(`<dialog class="dialog-message"><p class="dialog-title">請選擇要更改的資訊</p></dialog> `);
+                $( ".dialog-message" ).dialog({
+                    modal: true, resizable : false, draggable : false,
+                    buttons: {
+                        取消: function() { $( ".dialog-message" ).dialog( "close" ); }, 
+                        基本資訊: function() { $( ".dialog-message" ).dialog( "close" ); ShopCar_Page01(); }, 
+                        取貨日期: function() { $( ".dialog-message" ).dialog( "close" ); ShopCar_Page02(); }
+                    }
+                });
+            });
+        }
+    </script>
+    <script> // page Order
+        function Page_Order() {
+            $(".Basic-Information").append(`<label class="Basic-txt" style="margin-top: 50px;">姓名：`+(name)+`</label>`);
+            $(".Basic-Information").append(`<label class="Basic-txt" style="margin-top: 80px;">取貨地點：`+(pos)+`</label>`);
+            $(".Basic-Information").append(`<label class="Basic-txt" style="margin-top: 110px;">取貨日期：`+(date_selected)+`</label>`);
+            var total_price = 0;
+            for(i = 0; i < SaladBoat_Order.length; i++) {
+                $(".Salad-Order-BBox").append(`
+                <div class="Salad-Order-Box" style="margin-top: `+(180 * i)+`px;">
+                    <span class="Salad-Order-Main">`+(SaladBoat_Order[i][2])+`</span>
+                    <span class="Salad-Order-Secd">`+(SaladBoat_Order[i][3])+`</span>
+                    <span class="Salad-Order-Bread">`+(SaladBoat_Order[i][0])+`</span>
+                    <span class="Salad-Order-Salad">`+(SaladBoat_Order[i][1])+`</span>
+                    <span class="Salad-Order-OnePrice">單價 `+(price(SaladBoat_Order[i][2], 1))+` 元</span>
+                    <span class="Salad-Order-Count">數量：`+(SaladBoat_Order[i][4])+` 份</span>
+                </div>
+                `);
+                total_price += ((price(SaladBoat_Order[i][2], 1)) * (SaladBoat_Order[i][4]));
+            }
+            for(i = 0; i < Donut_Order.length; i++) {
+                $(".Donut-Order-BBox").append(`
+                <div class="Donut-Order-Box" style="margin-top: `+((180 * (SaladBoat_Order.length)) + (150 * i))+`px;">
+                    <span class="Donut-Order-FLR">`+(Donut_Order[i][0])+`</span>
+                    <span class="Donut-Order-OnePrice">單價 `+(price(Donut_Order[i][0], 1))+` 元</span>
+                    <span class="Donut-Order-Count">數量：`+(Donut_Order[i][1])+` 個</span>
+                </div>
+                `);
+                total_price += ((price(Donut_Order[i][0], 1)) * (Donut_Order[i][1]));
+            }
+            $(".Donut-Order-BBox").append(`<span class="Total-Price" style="margin-top: `+((180 * (SaladBoat_Order.length)) + (150 * (Donut_Order.length)))+`px;">總計 ` + total_price + ` 元</span>`);
+
+        }
     </script>
 </body>
 </html>
